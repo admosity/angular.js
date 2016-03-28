@@ -392,7 +392,7 @@ function Browser(window, document, $log, $sniffer) {
       }
     } else {
       if (rawDocument.cookie !== lastCookieString) {
-        lastCookieString = rawDocument.cookie;
+        lastCookieString = rawDocument.cookie || '';
         cookieArray = lastCookieString.split("; ");
         lastCookies = {};
 
